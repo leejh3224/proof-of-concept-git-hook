@@ -1,0 +1,20 @@
+{
+  "name": "pc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pre-commit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node pre-commit.js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^3.0.9"
+  }
+}
