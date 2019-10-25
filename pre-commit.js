@@ -13,7 +13,7 @@ exec('git diff --cached --name-only --diff-filter=ACM', (err, stdout, stderr) =>
         const matched = stdout.match(matchFilesUnderServer)
 
         for (const source of matched) {
-            const dest = file.replace('server/', 'client/')
+            const dest = source.replace('server/', 'client/')
             exec(`cp ${source} ${dest}`, (err, stdout, stderr) => {
                 if (err) {
                     console.log('failed to copy!', err)
@@ -28,6 +28,4 @@ exec('git diff --cached --name-only --diff-filter=ACM', (err, stdout, stderr) =>
             })
         }
     }
-
-    console.log(stdout);
 });
